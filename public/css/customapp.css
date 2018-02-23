@@ -1,0 +1,52 @@
+#flash-message {
+ -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+	-webkit-animation: fadeOut 2s forwards;
+	animation: fadeOut 2s forwards;
+	-webkit-animation-delay: 3s;
+	animation-delay: 5s;
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	z-index: 10;
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+thead {
+    font-weight: bold;
+    color: #777777;
+}
+
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+.blueBtn{
+  padding: 5px 13px!important;
+  border-radius: 0 !important;
+}
+
+.btn{
+    border-radius: 0 !important;
+}
+
+/*To have sidebar space add 250px to last margin parameter to sb-admin-2.css*/
+/*#page-wrapper {
+    margin: 0 0 0 250px;
+}*/
