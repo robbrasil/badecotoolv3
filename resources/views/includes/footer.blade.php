@@ -39,9 +39,12 @@ $(document).ready(function(){
         rowReorder: {
             selector: 'td:nth-child(2)'
         },
-        responsive: true
-    } );
-
-
+        responsive: true,
+        columnDefs: [
+           { width: 75, targets: 0 },
+           { width: 100, targets: 1 },
+           { width: 110, targets: 6 },
+       ]
+    });
 });
 </script>
