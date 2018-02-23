@@ -15,30 +15,6 @@ Route::get('/', 'EntriesController@index')->name('home');
 
 Route::get('/home', 'EntriesController@index');
 
-//Admin
-Route::prefix('admin')->group(function(){
-
-	Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
-	Route::post('/login','Auth\AdminLoginController@login')->name('admin.login.submit');
-	Route::get('/','AdminController@index')->name('admin.dashboard');
-	Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
-
-	//Admin Reset password
-
-	Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
-	Route::get('/password/reset', 'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
-	Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
-	Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
-
-	//Admin Profile
-
-	Route::get('/profile', 'AdminProfileController@show')->name('admin.profile');
-	Route::get('/entries', 'AdminProfileController@showEntries')->name('admin.entries');
-
-
-});
-
-
 //Main table entries
 Route::get('/entries', 'EntriesController@index')->name('entries');
 

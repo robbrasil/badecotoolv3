@@ -62,8 +62,7 @@
                 <li>
                     <a href="/register">Register</a>
                 </li>
-                <li>
-                    <a href="/admin/login">Admin</a>
+               
                 @endif
             </ul>
             <!-- /.navbar-top-links -->
