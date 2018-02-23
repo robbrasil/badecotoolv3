@@ -46,7 +46,12 @@
   width:31.44px;
   height:30px;
 }
-
+#page-wrapper{
+  padding:0px!important;
+}
+.panel-body{
+  /* padding:0px!important; */
+}
 </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
