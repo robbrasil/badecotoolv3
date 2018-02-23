@@ -12,7 +12,7 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-               
+
                     <!-- /.dropdown-user -->
                 </li>
                 <!-- /.dropdown -->
@@ -23,38 +23,20 @@
                 </li>
                 <li>
                     <a href="/entries/create"><button type="button" id="tgBtn" class="btn btn-sm btn-success">Show Entry Form</button></a>
-                </li>                
+                </li>
                 <li>
                     <a href="/profile">{{ Auth::user()->name }}</a>
                 </li>
                  <li>
                     <a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                </li>        
+                </li>
                 <li>
                     <a href="/login">Login</a>
                 </li>
                 <li>
                     <a href="/register">Register</a>
                 </li>
-                <li>
-                    <a href="/admin/login">Admin</a>
-                </li>
-                @elseif (Auth::guard('admin')->check())
-                 <li>
-                    <a href="/entries"><button type="button" id="tgBtn" class="btn btn-sm btn-info" >Show Entries</button></a>
-                </li>
-                <li>
-                    <a href="/entries/create"><button type="button" id="tgBtn" class="btn btn-sm btn-success">Show Entry Form</button></a>
-                </li>                
-                <li>
-                    <a href="/profile">{{ Auth::guard('admin')->user()->name }}</a>
-                </li>
-                 <li>
-                    <a href="/admin/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                 </li>
-               
-              
-                </li>
+            
                 @else
                   <li>
                     <a href="/login">Login</a>
@@ -62,11 +44,11 @@
                 <li>
                     <a href="/register">Register</a>
                 </li>
-               
+
                 @endif
             </ul>
             <!-- /.navbar-top-links -->
-            
+
             <!-- //Uncomment to have sidenav and edit css to add margin to pagewrapper -->
             <!-- include ('includes.sidenav') -->
 
