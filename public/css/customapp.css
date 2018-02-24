@@ -13,11 +13,6 @@
 	z-index: 10;
 }
 
-#delHead{
-    width: 75px!important;
-    background-color: red;
-}
-
 @-webkit-keyframes fadeOut {
     from {opacity: 1;}
     to {opacity: 0;}
@@ -31,7 +26,7 @@
 thead {
     font-weight: bold;
     color: #777777;
-    
+
 }
 
 
