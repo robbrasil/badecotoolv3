@@ -24,7 +24,7 @@
     <!-- Custom Fonts -->
     <link href="/css/sb-admin-2/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" type="text/css" href="https://badecotool.com/css/customapp.css">
+    <link rel="stylesheet" type="text/css" href="/css/customapp.css">
 
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/> --}}
 
