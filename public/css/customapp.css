@@ -14,9 +14,10 @@
 }
 
 .entryBtns{
-  display: inline-flex;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
+  display: -webkit-box;
+  display: inline-flex;
 }
 .entryId{
   font-weight: bold;
