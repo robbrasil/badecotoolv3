@@ -41,10 +41,16 @@ $(document).ready(function(){
         },
         responsive: true,
         columnDefs: [
-           { width: 75, targets: 0 },
-           { width: 100, targets: 1 },
-           { width: 110, targets: 6 },
+           { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0 },
+           { width: 102, targets: 1 },
+           { responsivePriority: 4, targets:2 },
+           { responsivePriority: 2, targets:3 },
+           { responsivePriority: 5, targets:4 },
+           { responsivePriority: 3, targets:5 },
+           { width: 74, targets: 6 },
+
        ]
+
     });
 });
 </script>

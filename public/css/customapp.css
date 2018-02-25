@@ -13,6 +13,26 @@
 	z-index: 10;
 }
 
+.entryBtns{
+  display: inline-flex;
+}
+.entryId{
+  font-weight: bold;
+}
+.deleteBtn{
+  margin-right: 4px;
+}
+.dtr-data{
+  text-align: right;
+  display: block;
+  margin-top: -18px;
+}
+.dtr-details{
+  width: 100%;
+}
+table.dataTable thead .sorting_asc:after {
+    display: none;
+}
 @-webkit-keyframes fadeOut {
     from {opacity: 1;}
     to {opacity: 0;}
