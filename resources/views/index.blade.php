@@ -52,7 +52,7 @@
 
                <?php $adminId = DB::table('admins')->where('id', '=', $entry->user_id)->value('name') ?>
 
-            <td>{{ $adminId }} on {{ $entry->created_at->format('m/d/y') }} <br>
+            <td>{{ $adminId }} on {{ $entry->created_at }} <br>
 
                @elseif (Auth::user()->account_type == 'subscriber')
 
@@ -64,9 +64,9 @@
                 @endif
 
             </td>
-            <td>{{ $entry->created_at->format('m/d/y') }}</td>
+            <td>{{ $entry->created_at) }}</td>
             <td>@if ($entry->edit_id){{ $editorId[0]->name }}@else N/A @endif</td>
-            <td>@if ($entry->edit_id){{ $entry->updated_at->format('m/d/y') }}@else N/A @endif</td>
+            <td>@if ($entry->edit_id){{ $entry->updated_at->format('m/d/y D') }}@else N/A @endif</td>
 
 
    		</tr>
