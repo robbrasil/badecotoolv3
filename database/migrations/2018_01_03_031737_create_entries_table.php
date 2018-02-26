@@ -16,9 +16,7 @@ class CreateEntriesTable extends Migration
         Schema::create('entries', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('createdby_user_type');
             $table->integer('edit_id')->nullable();
-            $table->string('editedby_by_user_type')->nullable();
             $table->string('jobNumber');
             $table->string('community');
             $table->string('lotNumber');
