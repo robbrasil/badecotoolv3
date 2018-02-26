@@ -49,7 +49,8 @@ $(document).ready(function(){
            { responsivePriority: 3, targets:5 },
            { width: 74, targets: 6 },
 
-       ]
+       ],
+       order: [[6, "desc"]]
 
     });
 });
