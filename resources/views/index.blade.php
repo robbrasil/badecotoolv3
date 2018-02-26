@@ -47,7 +47,7 @@
         	<td>{{ $entry -> lotNumber }}</td>
         	<td>{{ $entry -> jobSize }} ft&sup2;</td>
         	<td>{{ $entry -> installer }}</td>
-        	<td>{{ date("m/d/y", strtotime($entry -> date)) }}</td>
+        	<td>{{ date("m/d/y D", strtotime($entry -> date)) }}</td>
                @if (Auth::user()->account_type == 'admin')
 
                <?php $adminId = DB::table('admins')->where('id', '=', $entry->user_id)->value('name') ?>
