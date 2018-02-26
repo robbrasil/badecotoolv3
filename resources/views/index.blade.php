@@ -7,7 +7,7 @@
 
 
 	 <div class="panel-body" id="dataTables-example-div">
-<table class="table table-striped table-bordered table-hover display nowrap" id="tableMain" cellspacing="0" width="100%">
+<table class="table table-striped table-bordered table-hover display nowrap order-column compact" id="tableMain" cellspacing="0" width="100%">
     <thead>
     <tr>
         <td name="delHead" id="delHead">Del&nbsp;/&nbsp;Info</td>

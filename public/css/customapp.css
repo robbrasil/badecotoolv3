@@ -34,6 +34,12 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child, table.
   padding-left: 10px!important;
   padding-right: 4px!important;
 }
+.dataTables_filter{
+  width: 50%;
+}
+.dataTables_length{
+  width: 50%;
+}
 .entryId > a {
   color: white;
 }
@@ -48,7 +54,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child, table.
 .dtr-details{
   width: 100%;
 }
-table.dataTable thead .sorting_asc:after {
+td#delHead.sorting_asc:after {
     display: none;
 }
 @-webkit-keyframes fadeOut {
