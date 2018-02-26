@@ -11,14 +11,14 @@
     <thead>
     <tr>
         <td name="delHead" id="delHead">Del&nbsp;/&nbsp;Info</td>
-        <td>Job #</td>
+        <td>Job&nbsp;#</td>
         <td class="all">Community</td>
-        <td class="all">Lot #</td>
+        <td class="all">Lot&nbsp;#</td>
         <td>Job Size</td>
         <td class="min-phone-l">Inst. Name</td>
         <td>Date</td>
-        <td>Assigned by</td>
-        <td>Assignment Date</td>
+        <td class="desktop">Assigned by</td>
+        <td class="desktop">Assignment Date</td>
         <td class="desktop">Updated by</td>
         <td class="desktop">Update Date</td>
 
@@ -29,7 +29,7 @@
     	<tr>
         	<td>
         		<div  class="entryId">
-        			<a href="/entries/{{$entry -> id}}/edit">Edit Entry</a>
+        			<a href="/entries/{{$entry -> id}}/edit">Edit</a>
         		</div>
             <div class="entryBtns">
         			<a href="/entries/{{$entry->id}}/delete"><button class="btn btn-danger btn-sm xBtn deleteBtn" title="Click to delete row"><i class="fa fa-trash" aria-hidden="true"></i>
