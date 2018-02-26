@@ -19,8 +19,8 @@ class EntriesController extends Controller
 	public function home()
 	{
 		return view('layout');
-	} 
-    
+	}
+
 	public function index()
 
 	{
@@ -28,7 +28,7 @@ class EntriesController extends Controller
 		// $entries = Entry::all();
 		$entries = Entry::latest()->get();
 		$editors = Entry::whereNotNull('edit_id')->get();
-		
+
 
 		return view('index', compact(['entries','editors']));
 
@@ -79,9 +79,9 @@ class EntriesController extends Controller
 
 			'user_id' => auth()->id(),
 
-			'createdby_user_type' => auth()->user()->value('account_type')
-
 			
+
+
 
 			// needs this at model for each field >> protected $fillable = ['jobNumber', 'commnunity', 'lotNumber', 'jobSize', 'installer', 'date', 'notes', 'user_id'];
 
