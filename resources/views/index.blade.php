@@ -11,14 +11,14 @@
     <thead>
     <tr>
         <td name="delHead" id="delHead">Del&nbsp;/&nbsp;Info</td>
-        <td>Job Number</td>
+        <td>Job #</td>
         <td class="all">Community</td>
-        <td class="all">Lot Number</td>
+        <td class="all">Lot #</td>
         <td>Job Size</td>
-        <td class="min-phone-l">Original Installer</td>
+        <td class="min-phone-l">Inst. Name</td>
         <td>Date</td>
-        <td>Created by</td>
-        <td>Creation Date</td>
+        <td>Assigned by</td>
+        <td>Assignment Date</td>
         <td class="desktop">Updated by</td>
         <td class="desktop">Update Date</td>
 
