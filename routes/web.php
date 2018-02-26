@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/shane', function(){
+  dd(\App\User::get());
+});
 Route::get('/', 'EntriesController@index')->name('home');
 
 Route::get('/home', 'EntriesController@index');
@@ -29,7 +31,7 @@ Route::patch('/entry/{id}', 'EntriesController@update');
 Route::get('/entries/{id}/delete', 'EntriesController@destroy');
 
 Route::get('/notes/{id}/edit', 'EntriesController@notesEdit');
- 
+
 Route::patch('/notes/{id}/update', 'EntriesController@notesUpdate');
 
 //User registration
@@ -56,7 +58,3 @@ Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
 
 Route::get('/logout', 'SessionsController@destroy');
-
-
-
-
