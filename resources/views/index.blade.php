@@ -64,7 +64,7 @@
                 @endif
 
             </td>
-            <td>{{ $entry->created_at) }}</td>
+            <td>{{ $entry->created_at }}</td>
             <td>@if ($entry->edit_id){{ $editorId[0]->name }}@else N/A @endif</td>
             <td>@if ($entry->edit_id){{ $entry->updated_at->format('m/d/y D') }}@else N/A @endif</td>
 
