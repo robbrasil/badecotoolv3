@@ -50,7 +50,7 @@ $(document).ready(function(){
            { width: 74, targets: 6 },
 
        ],
-       order: [[6, "desc"]]
+       order: [[6, "asc"]]
 
     });
 });
