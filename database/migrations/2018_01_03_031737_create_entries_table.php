@@ -14,9 +14,8 @@ class CreateEntriesTable extends Migration
     public function up()
     {
         Schema::create('entries', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');            
             $table->integer('user_id');
-            $table->integer('edit_id')->nullable();
             $table->string('jobNumber');
             $table->string('community');
             $table->string('lotNumber');
@@ -24,6 +23,7 @@ class CreateEntriesTable extends Migration
             $table->string('installer');
             $table->date('date');
             $table->text('notes')->nullable();
+            $table->integer('edit_id')->nullable();
             $table->timestamps();
         });
     }

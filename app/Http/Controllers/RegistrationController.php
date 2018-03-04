@@ -26,29 +26,37 @@ class RegistrationController extends Controller
 	{
 		 //validate form
 
+    dd(request('company'));
+
 		$this->validate(request(), [
 
 			'name' => 'required',
-			
+
+      'company' => 'required',
+
 			'email' => 'required|email',
-			
+
 			'password' => 'required|confirmed'
+
+
 		]);
 
 		//Create the user
 
-		$user = User::create([ 
+		$user = User::create([
 
 			'name' => request('name'),
 
+      'company' => request('company'),
+
 			'email' => request('email'),
-			
+
 			'password' => bcrypt(request('password'))
 		]);
 
 		//Sign them in
 
-		auth()->login($user); 
+		auth()->login($user);
 
 		//Send welcome email
 

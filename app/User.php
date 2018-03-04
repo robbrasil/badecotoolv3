@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Company;
 
 class User extends Authenticatable
 {
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'company', 'email', 'password'
     ];
 
     /**
@@ -30,7 +31,21 @@ class User extends Authenticatable
 
     public function entries()
     {
-        return $this->hasMany(Entry);
+        return $this->hasMany('App\Entry');
     }
+    public function company_name()
+    {
+        return Company::where('id', '=', auth()->user()->id)->value('name');
+    }
+    public function company_id()
+    {
+        return Company::where('id', '=', auth()->user()->id)->value('id');
+    }
+    public function company_logo()
+    {
+        return Company::where('id', '=', auth()->user()->id)->value('logo');
+    }
+
+
 
 }

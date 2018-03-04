@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Entry;
+use App\Company;
 
 class EntriesController extends Controller
 {
@@ -24,11 +25,10 @@ class EntriesController extends Controller
 	public function index()
 
 	{
-
 		// $entries = Entry::all();
-		$entries = Entry::latest()->get();
+		// $entries = Entry::latest()->get();
+		$entries = Entry::where('user_id', '=', auth()->user()->id)->take(100)->latest()->get();
 		$editors = Entry::whereNotNull('edit_id')->get();
-
 
 		return view('index', compact(['entries','editors']));
 
@@ -41,6 +41,7 @@ class EntriesController extends Controller
 
 	public function store()
 	{
+
 		$this->validate(request(), [
 
 			'jobNumber' => 'required',
@@ -54,7 +55,6 @@ class EntriesController extends Controller
 			'installer' => 'required',
 
 			'date' => 'required'
-
 
 		]);
 
@@ -77,11 +77,9 @@ class EntriesController extends Controller
 
 			'notes' => request('notes'),
 
-			'user_id' => auth()->id(),
+			'user_id' => auth()->user()->id
 
-			
-
-
+			// 'company_id' => auth()->user()->company_id,
 
 			// needs this at model for each field >> protected $fillable = ['jobNumber', 'commnunity', 'lotNumber', 'jobSize', 'installer', 'date', 'notes', 'user_id'];
 
@@ -144,7 +142,7 @@ class EntriesController extends Controller
 
 		$entry->edit_id = auth()->id();
 
-		$entry->editedby_by_user_type = auth()->user()->value('account_type');
+		// $entry->editedby_by_user_type = auth()->user()->value('account_type');
 
 		$entry->fill($request->input())->save();
 

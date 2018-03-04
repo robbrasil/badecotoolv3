@@ -1,10 +1,7 @@
 @extends ('layout')
 
-
 @section ('content')
-
  <h3 style="text-align: center">All entries</h3>
-
 
 	 <div class="panel-body" id="dataTables-example-div">
 <table class="table table-striped table-bordered table-hover display nowrap order-column compact" id="tableMain" cellspacing="0" width="100%">
@@ -19,9 +16,8 @@
         <td>Date</td>
         <td class="desktop">Assigned by</td>
         <td class="desktop">Assignment Date</td>
-        <td class="desktop">Updated by</td>
-        <td class="desktop">Update Date</td>
-
+        {{-- <td class="desktop">Updated by</td>
+        <td class="desktop">Update Date</td> --}}
     </tr>
     </thead>
     <tbody>
@@ -50,13 +46,11 @@
         	<td>{{ date("m/d/y D", strtotime($entry -> date)) }}</td>
                @if (Auth::user()->account_type == 'admin')
 
-               <?php $adminId = DB::table('admins')->where('id', '=', $entry->user_id)->value('name') ?>
-
-            <td>{{ $adminId }} on {{ $entry->created_at->format('m/d/y D') }} <br>
+            <td>{{ $entry->user->name }}  <br>
 
                @elseif (Auth::user()->account_type == 'subscriber')
 
-        	<td>{{ $entry -> user -> name }}
+        	<td>{{ $entry ->user->name }}
                 @endif
 
                 @if ($entry->edit_id)
@@ -65,9 +59,8 @@
 
             </td>
             <td>{{ $entry->created_at->format('m/d/y D') }}</td>
-            <td>@if ($entry->edit_id){{ $editorId[0]->name }}@else N/A @endif</td>
-            <td>@if ($entry->edit_id){{ $entry->updated_at->format('m/d/y D') }}@else N/A @endif</td>
-
+            {{-- <td>@if ($entry->edit_id){{ $editorId[0]->name }}@else N/A @endif</td>
+            <td>@if ($entry->edit_id){{ $entry->updated_at->format('m/d/y D') }}@else N/A @endif</td> --}}
 
    		</tr>
     	@endforeach
@@ -79,6 +72,4 @@
 </div>
 <!-- /.row (nested) -->
 </div>
-
-
 @endsection

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Company;
 
 class UploadController extends Controller
 {
@@ -32,5 +33,5 @@ class UploadController extends Controller
 
 
 	}
-    
+
 }
