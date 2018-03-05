@@ -38,10 +38,17 @@ class CompanyController extends Controller
     public function company_entries()
     {
       $input = User::where('company_id', '=', auth()->user()->company_id())->latest()->get()->pluck('id')->toArray();
-      $query = Entry::query()->where('user_id', '=', 0);
-
+      $query = Entry::query();
+      $i = 0;
       foreach ($input as $input) {
-      $query->orWhere('user_id', $input);
+        if($i == 0)
+        {
+          $query->where('user_id', '=', $input);
+        }else{
+          $query->orWhere('user_id', $input);
+        }
+          $i++;
+
       }
       $entries = $query->get();
       return view('index', compact(['entries']));
