@@ -1,5 +1,60 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      @if (Auth::check())
+           @if(Auth::user()->company_logo())
+              <ul class="nav navbar-nav navbar-left">
+                <li>
+                  <img src="{{Auth::user()->company_logo()}}" height="45px" width="auto" alt="{{Auth::user()->company_name()}}">
+                </li>
+              </ul>
+            @endif
+      @endif
+      {{-- <a class="navbar-brand" href="#">WebSiteName</a> --}}
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        @if( Auth::check())
+         <li class="{{ Request::is('company/entries') ? "active" : '' }}">
+             <a href="/company/entries">Installations</a>
+         </li>
+         <li class="{{ Request::is('entries/create') ? "active" : '' }}">
+             <a href="/entries/create">Add New</a>
+         </li>
+         <li class="dropdown">
+           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Welcome {{ Auth::user()->name }} <span class="caret"></span></a>
+           <ul class="dropdown-menu">
+             <li><a href="/profile"><i class="fa fa-user fa-fw"></i> Profile</a></li>
+             <li><a href="/company"><i class="fa fa-truck fa-fw"></i></i> Company</a></li>
+              <li><a href="/entries"><i class="fa fa-list fa-fw" aria-hidden="true"></i> My Assignments</a></li>
+             <li><a href="/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+           </ul>
+         </li>
+         @else
+           <li>
+             <a href="/login">Login</a>
+         </li>
+         <li>
+             <a href="/register">Register</a>
+         </li>
+         @endif
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+{{-- ///////////////////////////////////////////////// --}}
+{{-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -57,7 +112,7 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-</nav>
+</nav> --}}
 
 {{-- ////////////////////////////////////////////////////////////////////////////// --}}
  {{-- <!-- Navigation -->

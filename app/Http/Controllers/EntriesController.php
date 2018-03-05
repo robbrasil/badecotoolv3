@@ -16,7 +16,6 @@ class EntriesController extends Controller
 		 $this->middleware('auth:web');
 	}
 
-
 	public function home()
 	{
 		return view('layout');

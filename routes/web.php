@@ -64,3 +64,5 @@ Route::patch('/company/{id}',[
   'as' => 'logo.upload',
   'uses' => 'CompanyController@logoCreate'
 ]);
+
+Route::get('/company/entries', 'CompanyController@company_entries')->name('company_entries');

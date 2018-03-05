@@ -27,6 +27,45 @@ nav{
 .navbar-toggle {
     z-index:3;
 }
+.navbar-nav>li>a{
+  height:60px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: darkgray!important;
+}
+.active>a{
+  color: white!important;
+}
+.active{
+  background-color: darkgray;
+  animation: in 2s ease-out forwards;
+  /* animation-delay: 1s; */
+}
+
+@keyframes in{
+  0%{
+    letter-spacing: .5px;
+  }
+  30%{
+    letter-spacing: 1px;
+  }
+  100%{
+    letter-spacing: 2px;
+  }
+}
+legend{
+  margin-bottom: 2em;
+}
+#homeBtn{
+  margin-left: 1em;
+}
+a{
+  font-size: 18px;
+}
+.row{
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
 .entryBtns{
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;

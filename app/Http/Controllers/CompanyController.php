@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Company;
+use App\User;
+use App\Entry;
 
 class CompanyController extends Controller
 {
@@ -14,7 +16,6 @@ class CompanyController extends Controller
 
     public function logoCreate(Request $request, $id)
   	{
-
   	  // get current time and append the upload file extension to it,
   	  // then put that name to $logoName variable.
   	  $logoName = $request->company_logo->getClientOriginalName();
@@ -32,7 +33,18 @@ class CompanyController extends Controller
   		$logo->save();
 
   		return redirect()->route('company');
-
-
   	}
+
+    public function company_entries()
+    {
+      $input = User::where('company_id', '=', auth()->user()->company_id())->latest()->get()->pluck('id')->toArray();
+      $query = Entry::query()->where('user_id', '=', 0);
+
+      foreach ($input as $input) {
+      $query->orWhere('user_id', $input);
+      }
+      $entries = $query->get();
+      return view('index', compact(['entries']));
+
+    }
 }
