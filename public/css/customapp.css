@@ -183,13 +183,9 @@ a{
       padding: 0px!important;
       /* padding-right:6px!important; */
     }
-    #bg-text{
-      font-size: 82px;
-      line-height: 69px;
-    }
+  
     #background{
-      top: 72px;
-      left:15px;
+      display:none;
     }
 
 }
