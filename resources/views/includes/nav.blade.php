@@ -23,6 +23,9 @@
          <li class="{{ Request::is('company/entries') ? "active" : '' }}">
              <a href="/company/entries">Installations</a>
          </li>
+         <li class="{{ Request::is('company/archived') ? "active" : '' }}">
+             <a href="/company/archived">Load Archive</a>
+         </li>
          <li class="{{ Request::is('entries/create') ? "active" : '' }}">
              <a href="/entries/create">Add New</a>
          </li>

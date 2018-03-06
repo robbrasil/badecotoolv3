@@ -51,4 +51,15 @@ class CompanyController extends Controller
       $entries = $query->get();
       return view('index', compact(['entries']));
     }
+
+    public function company_archive()
+    {
+      $entries = Entry::where('user_id', '=', auth()->user()->id)->latest()->get();
+  		$editors = Entry::whereNotNull('edit_id')->get();
+
+  		return view('index', compact(['entries','editors']));
+    }
+
+
+
 }
