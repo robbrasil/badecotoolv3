@@ -156,7 +156,7 @@ thead {
 #background{
     position:absolute;
     top:33px;
-
+    z-index: -1;
 }
 #bg-text
 {
@@ -164,6 +164,9 @@ thead {
     opacity: .15;
     font-size:120px;
     font-weight: bold;
+}
+a{
+  z-index: 10;
 }
 
 @media only screen
