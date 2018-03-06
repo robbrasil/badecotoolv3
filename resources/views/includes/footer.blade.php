@@ -32,25 +32,45 @@ $(document).ready(function(){
       };
       date_input.datepicker(options);
 
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        var table = $('#tableMain').DataTable( {
+               rowReorder: {
+                   selector: 'td:nth-child(2)'
+               },
+               responsive: true,
+               "pagingType": "simple",
+               columnDefs: [
+                  { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0 },
+                  { width: 102, targets: 1 },
+                  { responsivePriority: 4, targets:2 },
+                  { responsivePriority: 2, targets:3 },
+                  { responsivePriority: 5, targets:4 },
+                  { responsivePriority: 3, targets:5 },
+
+              ],
+              order: [[6, "asc"]]
+           });
+      }else{
+        // $('#tableMain').DataTable();
+     var table = $('#tableMain').DataTable( {
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            columnDefs: [
+               { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0 },
+               { width: 102, targets: 1 },
+               { responsivePriority: 4, targets:2 },
+               { responsivePriority: 2, targets:3 },
+               { responsivePriority: 5, targets:4 },
+               { responsivePriority: 3, targets:5 },
+
+           ],
+           order: [[6, "asc"]]
+        });
+
+      }
 
 
-    // $('#tableMain').DataTable();
- var table = $('#tableMain').DataTable( {
-        rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
-        responsive: true,
-        columnDefs: [
-           { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0 },
-           { width: 102, targets: 1 },
-           { responsivePriority: 4, targets:2 },
-           { responsivePriority: 2, targets:3 },
-           { responsivePriority: 5, targets:4 },
-           { responsivePriority: 3, targets:5 },           
-
-       ],
-       order: [[6, "asc"]]
-
-    });
 });
 </script>
