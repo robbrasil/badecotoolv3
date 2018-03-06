@@ -10,7 +10,7 @@
            @if(Auth::user()->company_logo())
               <ul class="nav navbar-nav navbar-left">
                 <li>
-                  <img src="{{Auth::user()->company_logo()}}" height="45px" width="auto" alt="{{Auth::user()->company_name()}}">
+                  <img src="{{Auth::user()->company_logo()}}" class="headerLogo" height="45px" width="auto" alt="{{Auth::user()->company_name()}}">
                 </li>
               </ul>
             @endif
@@ -43,12 +43,13 @@
              <a href="/register">Register</a>
          </li>
          @endif
-
       </ul>
     </div>
   </div>
 </nav>
-
+<div id="background">
+  <p id="bg-text">Badeco Tool v3</p>
+</div>
 
 
 

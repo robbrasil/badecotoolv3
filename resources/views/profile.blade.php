@@ -50,7 +50,7 @@
 											{{Form::label('user_photo', 'User Photo',['class' => 'control-label'])}}
 											{{Form::file('user_photo')}}
 										</div>
-											{{Form::submit('Save', ['class' => 'btn btn-success'])}}
+											{{Form::submit('Save', ['class' => 'btn btn-success pull-right'])}}
 											{{Form::close()}}
 									</div>
 								<div class="col-md-4">

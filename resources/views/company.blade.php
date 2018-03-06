@@ -31,7 +31,7 @@
 		{{Form::label('company_logo', 'Company Logo',['class' => 'control-label'])}}
 		{{Form::file('company_logo')}}
 		</div>
-			{{Form::submit('Save', ['class' => 'btn btn-success'])}}
+			{{Form::submit('Save', ['class' => 'btn btn-success pull-right'])}}
 
 {{Form::close()}}
 </div>
