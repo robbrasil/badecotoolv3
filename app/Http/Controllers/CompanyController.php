@@ -36,7 +36,7 @@ class CompanyController extends Controller
 
     public function company_entries()
     {
-      $input = User::where('company_id', '=', auth()->user()->company_id())->take(50)->latest()->get()->pluck('id')->toArray();
+      $input = User::where('company_id', '=', auth()->user()->company_id())->latest()->get()->pluck('id')->toArray();
       $query = Entry::query();
       $i = 0;
       foreach ($input as $input) {
@@ -48,7 +48,7 @@ class CompanyController extends Controller
         }
           $i++;
       }
-      $entries = $query->get();
+      $entries = $query->take(50)->get();
       return view('index', compact(['entries']));
     }
 
