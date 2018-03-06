@@ -180,10 +180,10 @@ a{
       margin-left: 2em;
     }
     .panel-body {
-      padding: 0px!important;
+      padding: 15px!important;
       /* padding-right:6px!important; */
     }
-  
+
     #background{
       display:none;
     }

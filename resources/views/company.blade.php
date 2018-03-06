@@ -5,9 +5,9 @@
 
 	</style>
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-2">
 	</div>
-	<div class="col-md-4" style="margin-top:5em">
+	<div class="col-md-6" style="margin-top:4em">
     <div class="col-lg-12" id="panelBody" style="display: block;">
                     <div class="panel panel-default">
                         <div class="panel-heading">
