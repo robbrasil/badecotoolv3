@@ -35,15 +35,15 @@ class User extends Authenticatable
     }
     public function company_name()
     {
-        return Company::where('id', '=', auth()->user()->id)->value('name');
+        return Company::where('id', '=', auth()->user()->company_id)->value('name');
     }
     public function company_id()
     {
-        return Company::where('id', '=', auth()->user()->id)->value('id');
+        return Company::where('id', '=', auth()->user()->company_id)->value('id');
     }
     public function company_logo()
     {
-        return Company::where('id', '=', auth()->user()->id)->value('logo');
+        return Company::where('id', '=', auth()->user()->company_id)->value('logo');
     }
 
 

@@ -19,7 +19,6 @@ class CompanyController extends Controller
   	  // get current time and append the upload file extension to it,
   	  // then put that name to $logoName variable.
   	  $logoName = $request->company_logo->getClientOriginalName();
-
   	  /*
   	  talk the select file and move it public directory and make avatars
   	  folder if doesn't exsit then give it that unique name.
@@ -48,10 +47,8 @@ class CompanyController extends Controller
           $query->orWhere('user_id', $input);
         }
           $i++;
-
       }
       $entries = $query->get();
       return view('index', compact(['entries']));
-
     }
 }
