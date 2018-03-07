@@ -26,7 +26,7 @@ class EntriesController extends Controller
 	{
 		// $entries = Entry::all();
 		// $entries = Entry::latest()->get();
-		$entries = Entry::where('user_id', '=', auth()->user()->id)->take(50)->order_by('created_at', 'asc')->get();
+		$entries = Entry::where('user_id', '=', auth()->user()->id)->take(50)->order_by('created_at', 'desc')->get();
 		$editors = Entry::whereNotNull('edit_id')->get();
 
 		return view('index', compact(['entries','editors']));
