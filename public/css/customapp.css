@@ -192,9 +192,19 @@ html{
       padding: 15px!important;
       /* padding-right:6px!important; */
     }
-
     #background{
       display:none;
+    }
+    #tableMain_length{
+      float: right;
+      padding-left: 64px;
+      margin-right: -19px;
+    }
+    #tableMain_filter{
+          margin-left: -19px;
+    }
+    #tableMain_paginate{
+      text-align: center;
     }
 
 }

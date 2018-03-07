@@ -50,6 +50,9 @@ $(document).ready(function(){
               ],
               order: [[6, "asc"]]
            });
+
+           table.columns.adjust()
+                .responsive.recalc();
       }else{
         // $('#tableMain').DataTable();
      var table = $('#tableMain').DataTable( {
@@ -68,7 +71,8 @@ $(document).ready(function(){
            ],
            order: [[6, "asc"]]
         });
-
+        table.columns.adjust()
+             .responsive.recalc();
       }
 
 
