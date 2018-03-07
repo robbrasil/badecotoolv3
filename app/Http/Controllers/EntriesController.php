@@ -16,6 +16,7 @@ class EntriesController extends Controller
 		 $this->middleware('auth:web');
 	}
 
+
 	public function home()
 	{
 		return view('layout');
@@ -26,7 +27,7 @@ class EntriesController extends Controller
 	{
 		// $entries = Entry::all();
 		// $entries = Entry::latest()->get();
-		$entries = Entry::where('user_id', '=', auth()->user()->id)->orderBy('id', 'desc')->take(50)->get();
+		$entries = Entry::where('user_id', '=', auth()->user()->id)->latest()->get();
 		$editors = Entry::whereNotNull('edit_id')->get();
 
 		return view('index', compact(['entries','editors']));
