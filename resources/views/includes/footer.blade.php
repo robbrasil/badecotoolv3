@@ -60,7 +60,7 @@ $(document).ready(function(){
                   { responsivePriority: 3, targets:5 },
 
               ],
-              order: [[8, "asc"]]
+              order: [[8, "desc"]]
            });
 
            table.columns.adjust()
