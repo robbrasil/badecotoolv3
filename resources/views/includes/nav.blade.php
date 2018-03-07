@@ -15,7 +15,7 @@
               </ul>
             @endif
       @endif
-      {{-- <a class="navbar-brand" href="#">WebSiteName</a> --}}
+      <a class="navbar-brand" href="#">Badeco Tool v3</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">

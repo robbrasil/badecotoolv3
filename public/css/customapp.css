@@ -18,20 +18,33 @@ nav{
 }
 .navbar-brand
 {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin:0 auto;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin:0 auto;
 }
 .navbar-toggle {
-    z-index:3;
+  z-index:3;
 }
 .navbar-nav>li>a{
   height:60px;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
-    background-color: darkgray!important;
+  background-color: #008DB6!important;
+}
+a.active{
+  background-color: #008DB6!important;
+  color: white;
+}
+.dropdown-menu>li>a.active{
+  color:white!important;
+}
+li:hover{
+  background-color: #dddd;
+  color: white;
 }
 .active>a{
   color: white!important;
@@ -205,6 +218,9 @@ html{
     }
     #tableMain_paginate{
       text-align: center;
+    }
+    .navbar-brand{
+      display: none;
     }
 
 }
