@@ -2,7 +2,7 @@
   <!--Copyright-->
           <div class="footer-copyright py-3 text-center">
               <div style="padding:20px" class="container-fluid">
-                  © 2018 Copyright: <a style="color:#777;text-decoration:none;font-size:14px;font-weight:500;" href="https://badecotool.com"> BadecoTool.com </a>
+                  © 2018 Copyright: <a style="color:#777;text-decoration:none;font-size:14px;font-weight:500;" href="http://www.badecotool.com"> BadecoTool.com </a>
               </div>
           </div>
           <!--/.Copyright-->

@@ -49,6 +49,9 @@ li:hover{
 .active>a{
   color: white!important;
 }
+a{
+  text-decoration: none;
+}
 .active{
   background-color: darkgray;
   animation: in 2s ease-out forwards;
