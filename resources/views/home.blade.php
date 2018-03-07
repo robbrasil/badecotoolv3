@@ -10,13 +10,13 @@
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
-                            {{ session('status') }} 
+                            {{ session('status') }}
                         </div>
                     @endif
 
-                    <h3>All entries</h3>
-    
-    
+                    <h3>All Entries</h3>
+
+
      <div class="panel-body" id="dataTables-example-div">
                                     <table class="table table-striped table-bordered table-hover" id="tableMain">
                                         <thead>
@@ -28,15 +28,15 @@
                                             <td>Job Size</td>
                                             <td>Original Installer</td>
                                             <td>Date</td>
-                                     
+
                                         </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($entries as $entry)
                                             <tr>
                                                 <td>
-                                                    <div class="hidden" class="entryId"> 
-                                                        {{$entry -> id}} 
+                                                    <div class="hidden" class="entryId">
+                                                        {{$entry -> id}}
                                                     </div>
                                                         <button class="btn btn-danger btn-sm xBtn" title="Click to delete row"><i class="fa fa-trash" aria-hidden="true"></i>
                                                         </button>
@@ -45,7 +45,7 @@
                                                         @else
                                                         <button class="btn btn-warning btn-md pull-right iBtn commentBtn">  <i class="fa fa-info" aria-hidden="true"></i></button>
                                                         @endif
-                                                                                                    
+
                                                 </td>
                                                 <td>{{$entry -> jobNumber}}</td>
                                                 <td>{{$entry -> community}}</td>
@@ -53,7 +53,7 @@
                                                 <td>{{$entry -> jobSize}}</td>
                                                 <td>{{$entry -> installer}}</td>
                                                 <td>{{$entry -> date}}</td>
-                                            
+
                                             </tr>
                                             @endforeach
                                         </tbody>
