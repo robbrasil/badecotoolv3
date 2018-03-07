@@ -48,16 +48,33 @@ class CompanyController extends Controller
         }
           $i++;
       }
-      $entries = $query->orderBy('id', 'desc')->take(50)->get();
+      $entries = $query->latest()->take(50)->get();
       return view('index', compact(['entries']));
     }
 
     public function company_archive()
     {
-      $entries = Entry::where('user_id', '=', auth()->user()->id)->latest()->get();
-  		$editors = Entry::whereNotNull('edit_id')->get();
 
-  		return view('index', compact(['entries','editors']));
+      $input = User::where('company_id', '=', auth()->user()->company_id())->latest()->get()->pluck('id')->toArray();
+      $query = Entry::query();
+      $i = 0;
+      foreach ($input as $input) {
+        if($i == 0)
+        {
+          $query->where('user_id', '=', $input);
+        }else{
+          $query->orWhere('user_id', $input);
+        }
+          $i++;
+      }
+      $entries = $query->get();
+      return view('index', compact(['entries']));
+
+
+      // $entries = Entry::where('user_id', '=', auth()->user()->id)->latest()->get();
+  		// $editors = Entry::whereNotNull('edit_id')->get();
+      //
+  		// return view('index', compact(['entries','editors']));
     }
 
 

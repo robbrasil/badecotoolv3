@@ -18,7 +18,7 @@ Route::get('/home', 'EntriesController@index');
 //Main table entries
 Route::get('/entries', 'EntriesController@index')->name('entries');
 
-Route::get('/entries/create', 'EntriesController@create');
+Route::get('/entries/create', 'EntriesController@create')->name('entries.create');
 
 Route::post('/entries', 'EntriesController@store');
 

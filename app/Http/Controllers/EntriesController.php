@@ -116,7 +116,7 @@ class EntriesController extends Controller
 
 		session()->flash('message','New entry added!');
 
-		return redirect('/entries');
+		return redirect()->route('entries.create');
 
 	}
 
@@ -146,7 +146,7 @@ class EntriesController extends Controller
 
 		$entry->fill($request->input())->save();
 
-		return redirect()->route('entries');
+		return redirect()->route('company_entries');
 
 	}
 
@@ -155,7 +155,7 @@ class EntriesController extends Controller
 
 		$entry = Entry::find($id)->delete();
 
-		return redirect()->route('entries');
+		return back();
 
 	}
 
@@ -179,7 +179,7 @@ class EntriesController extends Controller
 
 		$entry->save();
 
-		return redirect()->route('entries');
+		return redirect()->route('company_entries');
 	}
 
 }
