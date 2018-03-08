@@ -72,7 +72,7 @@ class CompanyController extends Controller
         }
           $i++;
       }
-      $entries = $query->latest()->get();
+      $entries = $query->orderBy('id', 'desc')->get();
       return view('index', compact(['entries']));
 
 
