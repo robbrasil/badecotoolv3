@@ -42,8 +42,6 @@ class RegistrationController extends Controller
 		]);
 
 		//Create the user
-    dd(request('company'));
-
 		$user = User::create([
 
 			'name' => request('name'),
@@ -70,7 +68,7 @@ class RegistrationController extends Controller
 
 		//Redirect
 
-		return redirect()->route('entries');
+		return redirect()->route('profile');
 
 
 	}

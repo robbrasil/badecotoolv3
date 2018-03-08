@@ -25,11 +25,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('company') ? ' has-error' : '' }}">
-                            <label for="company" class="col-md-4 control-label">Company ID</label>
+                        <div class="form-group{{ $errors->has('company_id') ? ' has-error' : '' }}">
+                            <label for="company_id" class="col-md-4 control-label">Company ID</label>
 
                             <div class="col-md-6">
-                                <input id="company" type="text" class="form-control" name="company" required autofocus>
+                                <input id="company_id" type="text" class="form-control" name="company_id" required autofocus>
                             </div>
                         </div>
 
