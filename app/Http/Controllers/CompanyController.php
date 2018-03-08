@@ -9,6 +9,11 @@ use App\Entry;
 
 class CompanyController extends Controller
 {
+    public function __construct()
+    {
+       // $this->middleware('auth')->except(['home']);
+       $this->middleware('auth:web');
+    }
     public function company()
     {
       return view('company');
@@ -67,7 +72,7 @@ class CompanyController extends Controller
         }
           $i++;
       }
-      $entries = $query->get();
+      $entries = $query->latest()->get();
       return view('index', compact(['entries']));
 
 

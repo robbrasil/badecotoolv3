@@ -26,7 +26,7 @@ class RegistrationController extends Controller
 	{
 		 //validate form
 
-    dd(request('company'));
+
 
 		$this->validate(request(), [
 
@@ -42,12 +42,13 @@ class RegistrationController extends Controller
 		]);
 
 		//Create the user
+    dd(request('company'));
 
 		$user = User::create([
 
 			'name' => request('name'),
 
-      'company' => request('company'),
+      'company_id' => request('company'),
 
 			'email' => request('email'),
 
