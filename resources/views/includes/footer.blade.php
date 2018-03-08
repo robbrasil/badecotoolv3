@@ -25,6 +25,8 @@
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.2.1/js/dataTables.responsive.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.16/sorting/datetime-moment.js"></script>
 
     <script>
 $(document).ready(function(){
@@ -43,6 +45,7 @@ $(document).ready(function(){
         autoclose: true,
       };
       date_input.datepicker(options);
+      $.fn.dataTable.moment( 'MM/DD/YYYY ddd' );
 
       if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         var table = $('#tableMain').DataTable( {
@@ -79,14 +82,11 @@ $(document).ready(function(){
                { responsivePriority: 2, targets:3 },
                { responsivePriority: 5, targets:4 },
                { responsivePriority: 3, targets:5 },
-
            ],
            order: [[8, "desc"]]
         });
         table.columns.adjust()
              .responsive.recalc();
       }
-
-
 });
 </script>
