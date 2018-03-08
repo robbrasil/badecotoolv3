@@ -40,7 +40,7 @@
          </li>
          @else
            <li>
-             <a href="/login">Login</a>
+             <a style="color:white" href="/login">Login</a>
          </li>
          <li>
              <a href="/register">Register</a>
@@ -53,8 +53,6 @@
 <div id="background">
   <p id="bg-text">Badeco Tool v3</p>
 </div>
-
-
 
 {{-- ///////////////////////////////////////////////// --}}
 {{-- <nav class="navbar navbar-default">

@@ -37,7 +37,7 @@ nav{
 }
 a.active{
   background-color: #008DB6!important;
-  color: white;
+  color: white!important;
 }
 .dropdown-menu>li>a.active{
   color:white!important;
