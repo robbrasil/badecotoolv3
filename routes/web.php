@@ -68,3 +68,7 @@ Route::patch('/company/{id}',[
 Route::get('/company/entries', 'CompanyController@company_entries')->name('company_entries');
 
 Route::get('/company/archived', 'CompanyController@company_archive')->name('company_archive');
+
+Route::get('/company/register', 'CompanyController@company_register')->name('company_register');
+
+Route::post('/company/register', 'CompanyController@company_create')->name('company_register');

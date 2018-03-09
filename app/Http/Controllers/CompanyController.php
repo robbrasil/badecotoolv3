@@ -82,6 +82,35 @@ class CompanyController extends Controller
   		// return view('index', compact(['entries','editors']));
     }
 
+    public function company_register()
+    {
+      $companies = Company::orderBy('id')->get();;
 
+      return view('forms.company_register', compact(['companies']));
+    }
+
+    public function company_create()
+    {
+      $this->validate(request(), [
+
+        'name' => 'required',
+
+      ]);
+
+      // dd(auth()->id());
+
+      // Refactoring
+      Company::create([
+
+        'name' => request('name'),
+
+
+        // 'company_id' => auth()->user()->company_id,
+
+        // needs this at model for each field >> protected $fillable = ['jobNumber', 'commnunity', 'lotNumber', 'jobSize', 'installer', 'date', 'notes', 'user_id'];
+
+      ]);
+      return redirect()->route('company_register');
+    }
 
 }

@@ -6,6 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+  
       @if (Auth::check())
            @if(Auth::user()->company_logo())
               <ul class="nav navbar-nav navbar-left">

@@ -52,16 +52,22 @@ $(document).ready(function(){
                rowReorder: {
                    selector: 'td:nth-child(2)'
                },
-               responsive: true,
+               responsive: {
+            details: {
+                type: 'column',
+                target: 'td.control'
+            }
+        },
+
                "pagingType": "simple",
                columnDefs: [
-                  { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0 },
+                  { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0, },
                   { width: 102, targets: 1 },
                   { responsivePriority: 4, targets:2 },
                   { responsivePriority: 2, targets:3 },
                   { responsivePriority: 5, targets:4 },
                   { responsivePriority: 3, targets:5 },
-
+                  {className: 'control', targets:6},
               ],
               order: [8, "desc"],
            });
@@ -74,14 +80,27 @@ $(document).ready(function(){
             rowReorder: {
                 selector: 'td:nth-child(2)'
             },
-            responsive: true,
+            responsive: {
+            details: {
+                type: 'column',
+                target: 'td.control'
+            }
+        },
+
             columnDefs: [
-               { width: 75, responsivePriority: 0, bSortable:false, bSearchable:false, targets: 0 },
-               { width: 102, targets: 1 },
+               { width: 75,
+                 responsivePriority: 0,
+                 bSortable:false,
+                 bSearchable:false,
+                 targets: 0,
+
+                    },
+               { width: 102,  targets: 1 },
                { responsivePriority: 4, targets:2 },
                { responsivePriority: 2, targets:3 },
                { responsivePriority: 5, targets:4 },
                { responsivePriority: 3, targets:5 },
+               {className: 'control', targets:6},
            ],
            order: [[8, "desc"]]
         });
