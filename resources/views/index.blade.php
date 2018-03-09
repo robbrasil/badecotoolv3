@@ -4,7 +4,7 @@
  <h3 style="text-align: center">All Entries</h3>
 
 	 <div class="panel-body" id="dataTables-example-div">
-<table class="table table-striped table-bordered table-hover display nowrap order-column compact" id="tableMain" cellspacing="0" width="100%">
+<table class="table table-striped table-bordered table-hover display nowrap order-column compact" id="tableMain" cellspacing="0">
     <thead>
     <tr>
         <td class="all" name="delHead" id="delHead">Del&nbsp;/&nbsp;Info</td>
