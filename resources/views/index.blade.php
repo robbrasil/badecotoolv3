@@ -7,7 +7,7 @@
 <table class="table table-striped table-bordered table-hover display nowrap order-column compact" id="tableMain" cellspacing="0" width="100%">
     <thead>
     <tr>
-        <td name="delHead" id="delHead">Del&nbsp;/&nbsp;Info</td>
+        <td class="all" name="delHead" id="delHead">Del&nbsp;/&nbsp;Info</td>
         <td>Job&nbsp;#</td>
         <td class="all">Community</td>
         <td class="all">Lot&nbsp;#</td>
