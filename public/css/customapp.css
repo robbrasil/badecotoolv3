@@ -222,6 +222,10 @@ html{
     .dataTable{
       /* margin-left: -20px; */
     }
+    #tableMain{
+      margin-left: -50px!important;
+
+    }
     img{
       max-width: 100%;
     }
