@@ -240,12 +240,12 @@ html{
     }
     #tableMain_length{
       float: right;
-      margin-right: -668px;
+      margin-right: -32px;
       width: 62px;
     }
     #tableMain_filter{
       margin-left: -28px;
-      width: 200px;
+      width: 140px;
       margin-bottom: 1em;
     }
     #tableMain_paginate{
