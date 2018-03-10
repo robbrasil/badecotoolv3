@@ -218,7 +218,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
     margin-right: -19px;
   }
 #tableMain_filter{
-        margin-left: -19px;
+        margin-left: 0px;
   }
 #tableMain_paginate{
     text-align: center;
@@ -259,11 +259,13 @@ and (-webkit-min-device-pixel-ratio: 1)  {
     }
     #tableMain_length{
       float: right;
-      padding-left: 64px;
-      margin-right: -19px;
+      margin-right: -668px;
+      width: 62px;
     }
     #tableMain_filter{
-          margin-left: -19px;
+      margin-left: -28px;
+      width: 200px;
+      margin-bottom: 1em;
     }
     #tableMain_paginate{
       text-align: center;
