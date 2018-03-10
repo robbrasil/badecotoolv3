@@ -308,3 +308,20 @@ html{
     }
 
 }
+/* iphone x */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    #tableMain_length{
+      float: right;
+      margin-right: -32px!important;
+      width: 62px!important;
+    }
+    #tableMain_filter{
+      margin-left: -28px!important;
+      width: 140px!important;
+      margin-bottom: 1em;
+    }
+}
