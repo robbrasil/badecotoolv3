@@ -206,11 +206,13 @@ div.popover{
 html{
   width:100%;
 }
-/* iPad */
+/* iPad Mini*/
+/* Portrait */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (-webkit-min-device-pixel-ratio: 1)  {
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1) {
 
 #tableMain_length{
     float: right;
@@ -218,7 +220,7 @@ and (-webkit-min-device-pixel-ratio: 1)  {
     margin-right: -19px;
   }
 #tableMain_filter{
-        margin-left: -680px;
+    margin-left: -675px;
   }
 #tableMain_paginate{
     text-align: center;
@@ -229,6 +231,31 @@ and (-webkit-min-device-pixel-ratio: 1)  {
   display: -ms-inline-flexbox;
   display: -webkit-box;
 }
+}
+/* iPad Mini */
+/* Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #tableMain_length{
+        float: right;
+        padding-left: 64px;
+        margin-right: 0px;
+      }
+    #tableMain_filter{
+        margin-left: -475px;
+      }
+    #tableMain_paginate{
+        text-align: center;
+      }
+    #tableMain_wrapper > div.row{
+      display: inline-flex;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: -webkit-box;
+    }
 }
 /* iPhone */
 @media only screen
