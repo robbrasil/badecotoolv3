@@ -206,8 +206,26 @@ div.popover{
 html{
   width:100%;
 }
+/* iPad */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
 
+#tableMain_length{
+    float: right;
+    padding-left: 64px;
+    margin-right: -19px;
+  }
+#tableMain_filter{
+        margin-left: -19px;
+  }
+#tableMain_paginate{
+    text-align: center;
+  }
 
+}
+/* iPhone */
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
