@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-  
+
       @if (Auth::check())
            @if(Auth::user()->company_logo())
               <ul class="nav navbar-nav navbar-left">
@@ -51,9 +51,7 @@
     </div>
   </div>
 </nav>
-<div id="background">
-  <p id="bg-text">Badeco Tool v3</p>
-</div>
+
 
 {{-- ///////////////////////////////////////////////// --}}
 {{-- <nav class="navbar navbar-default">
