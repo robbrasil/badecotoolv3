@@ -258,6 +258,18 @@ html{
       display: -webkit-box;
     }
 }
+/* ipad */
+/* Portrait */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .navbar-nav>li {
+        float: left;
+        max-width: 175px;
+}
 /* iPhone */
 @media only screen
   and (min-device-width: 375px)
