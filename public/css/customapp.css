@@ -242,10 +242,10 @@ html{
     #tableMain_length{
         float: right;
         padding-left: 64px;
-        margin-right: 0px;
+        margin-right: -500px;
       }
     #tableMain_filter{
-        margin-left: -475px;
+        margin-left: -465px;
       }
     #tableMain_paginate{
         text-align: center;
