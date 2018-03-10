@@ -53,8 +53,9 @@ class CompanyController extends Controller
         }
           $i++;
       }
+      $title = 'Last 50 Entries';
       $entries = $query->latest()->take(50)->get();
-      return view('index', compact(['entries']));
+      return view('index', compact(['entries','title']));
     }
 
     public function company_archive()
