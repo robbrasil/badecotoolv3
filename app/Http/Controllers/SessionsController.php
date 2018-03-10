@@ -15,7 +15,7 @@ class SessionsController extends Controller
 
     public function create()
 	{
-		
+
 		return view('sessions.create');
 
 	}
@@ -44,13 +44,13 @@ class SessionsController extends Controller
 			]);
 		}
 
-		return redirect()->route('entries');
-		
+		return redirect()->route('company_entries');
+
 	}
 
 	public function profile()
 	{
-		
+
 		return view('profile');
 
 
