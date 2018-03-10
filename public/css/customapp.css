@@ -269,6 +269,10 @@ html{
     .navbar-nav>li {
         float: left;
         max-width: 175px;
+      }
+      #tableMain {
+    margin-left: -20px;
+}
 }
 /* iPhone */
 @media only screen
