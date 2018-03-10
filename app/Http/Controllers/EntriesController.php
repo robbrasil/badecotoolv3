@@ -29,7 +29,7 @@ class EntriesController extends Controller
 		// $entries = Entry::latest()->get();
 		$entries = Entry::where('user_id', '=', auth()->user()->id)->latest()->get();
 		$editors = Entry::whereNotNull('edit_id')->get();
-    $title = 'All Entries from' . auth()->user()->name;
+    $title = 'All Entries from ' . auth()->user()->name;
 
 		return view('index', compact(['entries','editors','title']));
 
