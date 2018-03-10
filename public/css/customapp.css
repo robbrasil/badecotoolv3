@@ -206,56 +206,7 @@ div.popover{
 html{
   width:100%;
 }
-/* iPhone */
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2){
 
-    html,body{
-      width:100%!important;
-      margin:0!important;
-      padding:0!important;
-      overflow-x:hidden!important;
-    }
-    .dataTable{
-      /* margin-left: -20px; */
-    }
-    #tableMain{
-      margin-left: -50px!important;
-
-    }
-    img{
-      max-width: 100%;
-    }
-    img.headerLogo{
-      margin-left: 2em;
-    }
-    .panel-body {
-      /* padding: 15px!important; */
-      /* padding-right:6px!important; */
-    }
-    #background{
-      display:none;
-    }
-    #tableMain_length{
-      float: right;
-      margin-right: -32px;
-      width: 62px;
-    }
-    #tableMain_filter{
-      margin-left: -28px;
-      width: 140px;
-      margin-bottom: 1em;
-    }
-    #tableMain_paginate{
-      text-align: center;
-    }
-    .navbar-brand{
-      display: none;
-    }
-
-}
 /* iPad Mini*/
 /* Portrait */
 @media only screen
@@ -306,4 +257,54 @@ html{
       display: -ms-inline-flexbox;
       display: -webkit-box;
     }
+}
+/* iPhone */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2){
+
+    html,body{
+      width:100%!important;
+      margin:0!important;
+      padding:0!important;
+      overflow-x:hidden!important;
+    }
+    .dataTable{
+      /* margin-left: -20px; */
+    }
+    #tableMain{
+      margin-left: -50px!important;
+
+    }
+    img{
+      max-width: 100%;
+    }
+    img.headerLogo{
+      margin-left: 2em;
+    }
+    .panel-body {
+      /* padding: 15px!important; */
+      /* padding-right:6px!important; */
+    }
+    #background{
+      display:none;
+    }
+    #tableMain_length{
+      float: right;
+      margin-right: -32px;
+      width: 62px;
+    }
+    #tableMain_filter{
+      margin-left: -28px;
+      width: 140px;
+      margin-bottom: 1em;
+    }
+    #tableMain_paginate{
+      text-align: center;
+    }
+    .navbar-brand{
+      display: none;
+    }
+
 }
