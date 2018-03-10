@@ -31,7 +31,7 @@
         			<a href="/entries/{{$entry->id}}/delete"><button class="btn btn-danger btn-sm xBtn deleteBtn" title="Click to delete row"><i class="fa fa-trash" aria-hidden="true"></i>
             		</button></a>
         			@if (strlen($entry -> notes) > 0)
-        			<button class="btn btn-info btn-md pull-right iBtn commentBtn blueBtn" data-toggle="popover" title="Comments" data-trigger="focus" data-content="{{ $entry -> notes}} &nbsp;&nbsp;&nbsp; <a href='/notes/{{$entry->id}}/edit'><button class='btn btn-info btn-xs pull-right' type='button'>Edit</button>">  <i class="fa fa-info" aria-hidden="true"></i></button></a>
+        			<button class="btn btn-info btn-md pull-right iBtn commentBtn blueBtn" data-toggle="popover" title="Comments" data-trigger="focus" data-content="{{ $entry -> notes}} &nbsp;&nbsp;&nbsp; <a href='/notes/{{$entry->id}}/edit'><button class='btn btn-info btn-xs pull-right' type='button'>Edit</button>">  <i class="fa fa-info" aria-hidden="true"></i></button>
         			@else
         			<a href="/entries/{{$entry -> id}}/edit"><button class="btn btn-warning btn-sm pull-right iBtn commentBtn">  <i class="fa fa-plus" aria-hidden="true"></i></button></a>
             </div>
