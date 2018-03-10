@@ -73,8 +73,9 @@ class CompanyController extends Controller
         }
           $i++;
       }
+      $title = 'All Entries';
       $entries = $query->orderBy('id', 'desc')->get();
-      return view('index', compact(['entries']));
+      return view('index', compact(['entries','title']));
 
 
       // $entries = Entry::where('user_id', '=', auth()->user()->id)->latest()->get();
