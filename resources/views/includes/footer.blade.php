@@ -2,7 +2,7 @@
   <!--Copyright-->
           <div class="footer-copyright py-3 text-center">
               <div style="padding:20px" class="container-fluid">
-                  © 2018 Copyright: <a style="color:#777;text-decoration:none;font-size:14px;font-weight:500;" href="http://www.badecotool.com"> BadecoTool.com </a>
+                  © <?php echo date("Y"); ?> Copyright: <a style="color:#777;text-decoration:none;font-size:14px;font-weight:500;" href="http://www.badecotool.com"> BadecoTool.com </a>
               </div>
           </div>
           <!--/.Copyright-->
@@ -27,10 +27,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script src="https://cdn.datatables.net/plug-ins/1.10.16/sorting/datetime-moment.js"></script>
+    <script src="{{ asset('js/bootstrap-confirmation.js') }}"></script>
+
 
     <script>
 $(document).ready(function(){
-
+  $('[data-toggle=confirmation]').confirmation({
+    rootSelector: '[data-toggle=confirmation]',
+    // other options
+  });
     $('[data-toggle="popover"]').popover({
         html : true
     });

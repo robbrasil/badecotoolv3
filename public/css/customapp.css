@@ -21,6 +21,9 @@ nav{
 #tableMain{
   max-width: 100%!important;
 }
+.popover-content{
+  text-align: center!important;
+}
 .navbar-brand
 {
   font-size: 20px;
@@ -201,7 +204,17 @@ a{
   z-index: 10;
 }
 div.popover{
-  width: 300px!important;
+  /* min-width: 245px!important; */
+}
+.popover-title{
+  text-align: center;
+}
+.companyName{
+  font-family: Open Sans;
+  color: #555;
+  padding: 10px;
+  border: 2px solid #555;
+  background-color: #c6c6c6;
 }
 html{
   width:100%;

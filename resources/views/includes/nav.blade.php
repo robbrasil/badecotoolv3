@@ -14,6 +14,8 @@
                   <img src="{{Auth::user()->company_logo()}}" class="headerLogo" height="45px" width="auto" alt="{{Auth::user()->company_name()}}">
                 </li>
               </ul>
+            @else
+              <h3 class="nav navbar-nav navbar-left companyName">{{Auth::user()->company_name()}}</h3>
             @endif
       @endif
       {{-- <a class="navbar-brand" href="#">Badeco Tool v3</a> --}}

@@ -28,9 +28,19 @@
         			<a href="/entries/{{$entry -> id}}/edit">Edit</a>
         		</div>
             <div class="entryBtns">
-        			<a href="/entries/{{$entry->id}}/delete"><button class="btn btn-danger btn-sm xBtn deleteBtn" title="Click to delete row"><i class="fa fa-trash" aria-hidden="true"></i>
-            		</button></a>
-        			@if (strlen($entry -> notes) > 0)
+
+              <a class="btn btn-danger btn-sm xBtn deleteBtn" data-toggle="confirmation" data-title="Confirm Delete"
+              data-btn-ok-label="Delete"
+              data-btn-ok-class="btn-danger"
+              data-btn-cancel-label="Cancel"
+              data-btn-cancel-class="btn-warning"
+              data-placement="right"
+              href="/entries/{{$entry->id}}/delete" ><i class="fa fa-trash" aria-hidden="true"></i></a>
+        			{{-- <a href="/entries/{{$entry->id}}/delete"><button class="btn btn-danger btn-sm xBtn deleteBtn" title="Click to delete row"><i class="fa fa-trash" aria-hidden="true"></i></button></a> --}}
+
+              {{-- <a class="btn btn-danger btn-sm xBtn deleteBtn" tabindex="0" role="button" data-toggle="confirmation" title="Are you sure you want to delete?" data-content="<a href='/entries/{{$entry->id}}/delete'><button class='btn btn-danger btn-sm' type='button'>Delete</button>">  <i class="fa fa-trash" aria-hidden="true"></i></a> --}}
+
+              @if (strlen($entry -> notes) > 0)
         			<a class="btn btn-info btn-md pull-right iBtn commentBtn blueBtn" tabindex="0" role="button" data-toggle="popover" title="Comments" data-content="{{ $entry -> notes}} &nbsp;&nbsp;&nbsp; <a href='/notes/{{$entry->id}}/edit'><button class='btn btn-info btn-xs pull-right' type='button'>Edit</button>">  <i class="fa fa-info" aria-hidden="true"></i></a>
         			@else
         			<a href="/entries/{{$entry -> id}}/edit"><button class="btn btn-warning btn-sm pull-right iBtn commentBtn">  <i class="fa fa-plus" aria-hidden="true"></i></button></a>
