@@ -45,9 +45,9 @@
            <li>
              <a style="color:white" href="/login">Login</a>
          </li>
-         <li>
+         {{-- <li>
              <a href="/register">Register</a>
-         </li>
+         </li> --}}
          @endif
       </ul>
     </div>
