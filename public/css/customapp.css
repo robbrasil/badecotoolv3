@@ -107,6 +107,7 @@ img {
   text-align: center;
   letter-spacing: 3px;
   margin-bottom: 3px;
+  border-radius: 5px;
 }
  /* table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
   left: -24px!important;
