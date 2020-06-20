@@ -180,7 +180,7 @@ thead {
 }
 
 .btn{
-    border-radius: 4px !important;
+    border-radius: 6px !important;
 }
 
 /*To have sidebar space add 250px to last margin parameter to sb-admin-2.css*/
