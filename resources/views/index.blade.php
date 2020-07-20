@@ -68,7 +68,7 @@
                 @endif
 
             </td>
-            <td>{{ $entry->created_at->format('m/d/y D') }}</td>
+            <td data-sort="{{ $entry->created_at->format('m/d/y') }}">{{ $entry->created_at->format('m/d/y D') }}</td>
             {{-- <td>@if ($entry->edit_id){{ $editorId[0]->name }}@else N/A @endif</td>
             <td>@if ($entry->edit_id){{ $entry->updated_at->format('m/d/y D') }}@else N/A @endif</td> --}}
 
